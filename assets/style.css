@@ -1,0 +1,27 @@
+.countdownBox {
+    color: black;
+    background-color: white;
+    padding: 20px;
+}
+
+.hoverBox {
+    background: none;
+    margin: 0 auto;
+    margin-top: 10%;
+    padding: 20px;
+    outline: none;
+    overflow: auto;
+    width: 75%;
+}
+
+.startHidden {
+    display: none;
+}
+
+a.button {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+    text-decoration: none;
+    color: initial;
+}

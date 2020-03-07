@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/style.css">
+    <title>Quiz</title>
+</head>
+<body>
+    <!-- Link to high scores in the nav bar upper right corner -->
+    <nav class="navbar navbar-light bg-warning">
+        <span class="navbar-brand mb-0 h1"><a href="index.html">Homework 4 - Timed Quiz</a></span>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+
+        </button>
+        <ul class="nav">
+            <li class="nav-item">
+              <a class="nav-link active" href="scores.html">High Scores</a>
+            </li>
+         
+          <!-- timer count listed here -->
+            <li class="nav-item">
+              <a class="nav-link disabled"><strong>Timer: </strong><span id="counterDisplay"></span></a>
+            </li>
+          </ul>
+    </nav>
+
+ <div class="quizWrap">
+
+    <div id="quizBox" class="hoverBox">
+
+        <!-- this is the text box that displays the questions on the homepage of the quiz -->
+        <div id="boxOne">
+            <h3>Random Quiz</h3>
+            <p>the quiz will begin once you press 'start'</p>
+            <p>You will have 60 seconds to answer 5 questions.</p>
+            <p>If you answer all the questions before 60 seconds, you win! If you answer incorrectly, 10 seconds will be deducted from the timer.</p>
+            <p>Good luck!</p>
+            <!-- A <button id="startButton" > to start the quiz -->
+            <button id="startQuiz">Start Quiz!</button>
+        </div>
+
+        <!-- this section displays the questions once the 'start' button is pressed -->
+        <div id="boxTwo" class="startHidden"> 
+            <h3 id="title"></h3>
+            <button id ="chA" class="quizBtn"></button>
+            <button id ="chB" class="quizBtn"></button>
+            <button id ="chC" class="quizBtn"></button>
+            <button id="chD" class="quizBtn"></button>
+            <p id="checkAns"></p>
+        </div>
+        
+        <div id="boxThree" class="startHidden">
+            <h3>Times up! Sorry, you lose!</h3>
+            <a href="index.html" class="button px-2 py-1">Go Back</a>
+            <!-- <button href="index.html">Go Back</button> -->
+        </div>
+
+        <!-- If all questions are answered in time BOX FOUR appears -->   
+        <div id="boxFour" class="startHidden">
+            <h3 id="endMsg"></h3>
+            <h4 id="yourScore"></h4>
+            <p>Enter your initials for the leaderboard:</p>
+            <form>
+                <input type="text" id="userName">
+                <!--button to submit-->
+                <a href="scores.html" id="submitNameScore" class="button px-2 py-1">Submit</a>
+            </form>
+        </div>
+
+
+
+    </div>
+    
+ </div>
+
+ <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" ></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+ <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="assets/timer.js"></script>
+ <script src="assets/questions.js"></script>
+ <script src="assets/script.js"></script>
+ 
+
+
+</body>
+</html>
